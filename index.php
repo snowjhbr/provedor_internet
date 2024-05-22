@@ -1,31 +1,37 @@
-<?php
-require_once 'dao/ClienteDAO.php';
-require_once 'dao/PlanoInternetDAO.php';
-require_once 'dao/VendaPlanoInternetDAO.php';
-require_once 'dao/PagamentoDAO.php';
-require_once 'dao/ChamadoSuporteDAO.php';
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <form id="loginForm">
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="password" id="senha" name="senha" placeholder="Senha" required>
+        <button type="submit">Login</button>
+    </form>
 
-// Exemplo de uso das classes DAO
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            let formData = new FormData(this);
+            formData.append('action', 'login');
 
-// Criar um novo cliente
-$clienteDAO = new ClienteDAO();
-$cliente = new Cliente(null, 'João da Silva', 'joao@example.com', '123456789', 'Rua Exemplo, 123');
-$clienteDAO->create($cliente);
-
-// Ler um cliente pelo ID
-$cliente = $clienteDAO->read(1);
-if ($cliente != null) {
-    echo 'Nome: ' . $cliente->getNome();
-} else {
-    echo 'Cliente não encontrado.';
-}
-
-// Atualizar um cliente
-$cliente->setNome('João Atualizado');
-$clienteDAO->update($cliente);
-
-// Deletar um cliente
-$clienteDAO->delete(1);
-
-
-?>
+            fetch('../api.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    alert(data.message);
+                    window.location.href = 'home.php';
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
