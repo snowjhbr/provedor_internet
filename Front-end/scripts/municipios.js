@@ -1,5 +1,6 @@
 const municipioSelect = document.getElementById("municipio");
-// Evento inicial de carregamento dos estados (UFs)
+
+// evento inicial para carregamento dos municípios do Ceará
 fetch(
   "https://servicodados.ibge.gov.br/api/v1/localidades/estados/CE/municipios"
 )
