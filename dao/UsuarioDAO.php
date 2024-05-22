@@ -1,16 +1,19 @@
 <?php
-include 'config.php';
+include_once 'config/Database.php';
+include_once 'models/Usuario.php';
 
 class UsuarioDAO {
-    private $conexao;
+    private $conn;
+    private $table_name = "usuarios";
 
     public function __construct() {
-        $this->conexao = getConnection();
+        $database = new Database();
+        $this->conn = $database->getConnection();
     }
 
     public function login($usuario) {
-        $sql = "SELECT * FROM usuarios WHERE email = :email AND senha = :senha";
-        $stmt = $this->conexao->prepare($sql);
+        $query = "SELECT * FROM " . $this->table_name . " WHERE email = :email AND senha = :senha";
+        $stmt = $this->conn->prepare($query);
         $stmt->bindValue(':email', $usuario->getEmail());
         $stmt->bindValue(':senha', $usuario->getSenha());
         $stmt->execute();
