@@ -28,8 +28,7 @@
             <div class="inputs">
 
                 <h2>Cadastre-se para receber mais informações</h2>
-                <form action="processar_formulario.php" method="POST">
-
+                <form id="form">
                     <div class="nome">
                         <label for="nome">Nome</label>
                         <input type="text" id="nome" name="nome" required>
@@ -46,8 +45,8 @@
                     </div>
 
                     <div class="telefone">
-                        <label for="telefone">Celular</label>
-                        <input type="tel" id="telefone" name="telefone" required>
+                        <label for="celular">Celular</label>
+                        <input type="tel" id="celular" name="celular" required>
                     </div>
 
                     <div class="cidade">
@@ -67,6 +66,7 @@
     </footer>
 
     <script src="scripts/municipios.js"></script>
+    <script src="scripts/cadastro.js"></script>
 </body>
 
 </html>

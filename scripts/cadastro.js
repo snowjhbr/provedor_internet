@@ -1,11 +1,11 @@
-const LOCAL_API = "http://localhost:9900/main.php";
+const LOCAL_API = "http://localhost:9900/create.php";
 
 document.getElementById("form").addEventListener("submit", function (event) {
   event.preventDefault();
 
   var formData = new FormData(this);
 
-  fetch("http://localhost:9900/main.php", {
+  fetch(LOCAL_API, {
     method: "POST",
     body: formData,
   })
