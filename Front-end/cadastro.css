@@ -72,7 +72,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 850px; /* Alterado para 90vh */
+    height: 90vh; /* Alterado para 90vh */
     background-color: rgb(224, 224, 224);
 }
 
