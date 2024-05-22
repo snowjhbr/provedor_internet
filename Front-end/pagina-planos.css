@@ -14,6 +14,20 @@ header {
     height: 80px; /* Reduzindo a altura */
 }
 
+#main-background {
+    background-image: url('imagens/slide05.jpg'); /* Substitua pelo caminho da sua imagem de fundo */
+    background-size: cover; /* Ajusta a imagem para cobrir todo o conteúdo */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    background-attachment: fixed; /* Mantém a imagem fixa enquanto a página é rolada */
+    padding: 20px; /* Adicione padding se necessário */
+    opacity: 0.9;
+
+}
+
+main {
+    min-height: calc(100vh - 150px); /* Ajuste conforme necessário */
+}
+
 h1 {
     font-size: 50px; /* Reduzindo o tamanho da fonte */
 }
@@ -67,6 +81,7 @@ main {
     margin-top: 30px; /* Reduzindo o espaçamento superior */
 }
 
+
 .plano {
     width: 400px; /* Reduzindo a largura */
     background-color: #f4f4f4;
@@ -81,6 +96,10 @@ main {
     align-items: center;
     position: relative;
     box-sizing: border-box;
+}
+
+.plano:hover{
+    transform: scale(1.1);
 }
 
 .plano img {
@@ -112,7 +131,7 @@ main {
 }
 
 h4{
-    font-size: 20px; /* Reduzindo o tamanho da fonte */
+    font-size: 25px; /* Reduzindo o tamanho da fonte */
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
@@ -146,10 +165,11 @@ p{
 
 .plano button:hover {
     background-color: #c45800;
+    transform: scale(1.2);
 }
 
 footer {
-    background-color: #ff7300;
+    background-color: #110800;
     color: #fff;
     text-align: center;
     padding: 1px 0;
@@ -159,4 +179,5 @@ footer {
 }
 
 span{
-    font-size: 15px; /* Reduzindo o tamanho da
+    font-size: 15px; /* Reduzindo o tamanho da fonte*/
+}
