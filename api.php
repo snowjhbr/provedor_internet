@@ -24,8 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
             break;
 
-        // Adicione outros casos conforme necessário
-
         default:
             echo json_encode(["status" => "error", "message" => "Invalid action"]);
             break;

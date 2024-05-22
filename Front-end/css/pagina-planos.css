@@ -1,193 +1,196 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    background: linear-gradient(to bottom, rgba(253, 37, 37, 0.863), rgba(255, 72, 0, 0.2)), linear-gradient(to bottom right, #ff7300, #ffad7a);
-    color: #ffffff;
-    padding: 5px 0; /* Reduzindo o padding */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px; /* Reduzindo a altura */
+  background: linear-gradient(
+      to bottom,
+      rgba(253, 37, 37, 0.863),
+      rgba(255, 72, 0, 0.2)
+    ),
+    linear-gradient(to bottom right, #ff7300, #ffad7a);
+  color: #ffffff;
+  padding: 5px 0; /* Reduzindo o padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px; /* Reduzindo a altura */
 }
 
 #main-background {
-    background-image: url('imagens/fundo\ main\ 2.jpg'); /* Substitua pelo caminho da sua imagem de fundo */
-    background-size: cover; /* Ajusta a imagem para cobrir todo o conteúdo */
-    background-repeat: no-repeat; /* Evita a repetição da imagem */
-    background-attachment: fixed; /* Mantém a imagem fixa enquanto a página é rolada */
-    padding: 20px; /* Adicione padding se necessário */
-    opacity: 0.9;
-
+  background-image: url("imagens/fundo\ main\ 2.jpg"); /* Substitua pelo caminho da sua imagem de fundo */
+  background-size: cover; /* Ajusta a imagem para cobrir todo o conteúdo */
+  background-repeat: no-repeat; /* Evita a repetição da imagem */
+  background-attachment: fixed; /* Mantém a imagem fixa enquanto a página é rolada */
+  padding: 20px; /* Adicione padding se necessário */
+  opacity: 0.9;
 }
 
 main {
-    min-height: calc(100vh - 150px); /* Ajuste conforme necessário */
+  min-height: calc(100vh - 150px); /* Ajuste conforme necessário */
 }
 
 h1 {
-    font-size: 50px; /* Reduzindo o tamanho da fonte */
+  font-size: 50px; /* Reduzindo o tamanho da fonte */
 }
 
 .perfil {
-    margin-left: 30px; /* Reduzindo a margem */
-    padding-left: 10px; /* Reduzindo o padding */
+  margin-left: 30px; /* Reduzindo a margem */
+  padding-left: 10px; /* Reduzindo o padding */
 }
 
 .perfil img {
-    width: 80px; /* Reduzindo o tamanho da imagem */
-    height: 80px; /* Reduzindo o tamanho da imagem */
-    border-radius: 50%;
+  width: 80px; /* Reduzindo o tamanho da imagem */
+  height: 80px; /* Reduzindo o tamanho da imagem */
+  border-radius: 50%;
 }
 
 .perfil img:hover {
-    width: 100px; /* Reduzindo o tamanho da imagem */
-    height: 100px; /* Reduzindo o tamanho da imagem */
+  width: 100px; /* Reduzindo o tamanho da imagem */
+  height: 100px; /* Reduzindo o tamanho da imagem */
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0px 10px; /* Reduzindo o padding */
-    margin-right: 40px; /* Reduzindo a margem */
-    font-size: 30px; /* Reduzindo o tamanho da fonte */
+  list-style-type: none;
+  padding: 0px 10px; /* Reduzindo o padding */
+  margin-right: 40px; /* Reduzindo a margem */
+  font-size: 30px; /* Reduzindo o tamanho da fonte */
 }
 
 nav ul li {
-    display: inline;
-    margin-left: 20px; /* Reduzindo a margem */
-    color: white;
-    font-weight: bold;
+  display: inline;
+  margin-left: 20px; /* Reduzindo a margem */
+  color: white;
+  font-weight: bold;
 }
 
 nav ul li:first-child {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 nav ul li a:hover {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 /* -----------------MAIN DA PAGINA-------------*/
 
 main {
-    padding: 20px; /* Reduzindo o padding */
+  padding: 20px; /* Reduzindo o padding */
 }
 
 .planos {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px; /* Reduzindo o espaçamento superior */
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px; /* Reduzindo o espaçamento superior */
 }
-
 
 .plano {
-    width: 400px; /* Reduzindo a largura */
-    background-color: #f4f4f4;
-    padding: 20px; /* Reduzindo o padding */
-    border-radius: 10px; /* Reduzindo o raio do border-radius */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Reduzindo o desfoque da sombra */
-    text-align: center;
-    margin-right: 20px; /* Reduzindo a margem */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    box-sizing: border-box;
+  width: 400px; /* Reduzindo a largura */
+  background-color: #f4f4f4;
+  padding: 20px; /* Reduzindo o padding */
+  border-radius: 10px; /* Reduzindo o raio do border-radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Reduzindo o desfoque da sombra */
+  text-align: center;
+  margin-right: 20px; /* Reduzindo a margem */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
 }
 
-.plano:hover{
-    transform: scale(1.1);
+.plano:hover {
+  transform: scale(1.1);
 }
 
 .plano img {
-    width: 60px; /* Reduzindo o tamanho da imagem */
-    height: 60px; /* Reduzindo o tamanho da imagem */
+  width: 60px; /* Reduzindo o tamanho da imagem */
+  height: 60px; /* Reduzindo o tamanho da imagem */
 }
 
 .letreiro {
-    background-color: black;
-    color: white;
-    padding: 10px; /* Reduzindo o padding */
-    width: 100%;
-    border-radius: 10px; /* Reduzindo o raio do border-radius */
-    margin-bottom: 20px; /* Reduzindo o espaçamento inferior */
+  background-color: black;
+  color: white;
+  padding: 10px; /* Reduzindo o padding */
+  width: 100%;
+  border-radius: 10px; /* Reduzindo o raio do border-radius */
+  margin-bottom: 20px; /* Reduzindo o espaçamento inferior */
 }
 
 .plano h2 {
-    font-size: 25px; /* Reduzindo o tamanho da fonte */
-    color: #ff7300;
-    background-color: black;
-    border-radius: 10px; /* Reduzindo o raio do border-radius */
+  font-size: 25px; /* Reduzindo o tamanho da fonte */
+  color: #ff7300;
+  background-color: black;
+  border-radius: 10px; /* Reduzindo o raio do border-radius */
 }
 
 .h3 {
-    font-size: 35px; /* Reduzindo o tamanho da fonte */
-    color: #ff7300;
-    border-radius: 10px; /* Reduzindo o raio do border-radius */
-    font-weight: bold;
+  font-size: 35px; /* Reduzindo o tamanho da fonte */
+  color: #ff7300;
+  border-radius: 10px; /* Reduzindo o raio do border-radius */
+  font-weight: bold;
 }
 
-h4{
-    font-size: 25px; /* Reduzindo o tamanho da fonte */
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+h4 {
+  font-size: 25px; /* Reduzindo o tamanho da fonte */
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 
-p{
-    font-size: 15px; /* Reduzindo o tamanho da fonte */
-    font-weight: bold;
+p {
+  font-size: 15px; /* Reduzindo o tamanho da fonte */
+  font-weight: bold;
 }
 
-.globo-1 img{
-    order: 1;
+.globo-1 img {
+  order: 1;
 }
 
-.netflix-1 img{
-    order: 2;
+.netflix-1 img {
+  order: 2;
 }
 
 .plano button {
-    background-color: #ff7300;
-    color: #fff;
-    border: none;
-    padding: 10px 20px; /* Reduzindo o padding */
-    border-radius: 10px; /* Reduzindo o raio do border-radius */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 20px; /* Reduzindo a margem */
-    width: 150px; /* Reduzindo o tamanho do botão */
-    font-size: 15px; /* Reduzindo o tamanho da fonte */
-    font-weight: bold;
-    height: 60px; /* Reduzindo a altura */
+  background-color: #ff7300;
+  color: #fff;
+  border: none;
+  padding: 10px 20px; /* Reduzindo o padding */
+  border-radius: 10px; /* Reduzindo o raio do border-radius */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* Reduzindo a margem */
+  width: 150px; /* Reduzindo o tamanho do botão */
+  font-size: 15px; /* Reduzindo o tamanho da fonte */
+  font-weight: bold;
+  height: 60px; /* Reduzindo a altura */
 }
 
 .plano button:hover {
-    background-color: #c45800;
-    transform: scale(1.2);
+  background-color: #c45800;
+  transform: scale(1.2);
 }
 
 /* -----------------FOOTER DA PÁGINA DA PAGINA-------------*/
 
 footer {
-    background-color: #110800;
-    color: #fff;
-    text-align: center;
-    padding: 1px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  background-color: #110800;
+  color: #fff;
+  text-align: center;
+  padding: 1px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-span{
-    font-size: 15px; /* Reduzindo o tamanho da fonte*/
+span {
+  font-size: 15px; /* Reduzindo o tamanho da fonte*/
 }
