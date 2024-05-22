@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER DA PÁGINA */
+
+header {
+    background: linear-gradient(to bottom, rgba(253, 37, 37, 0.863), rgba(255, 72, 0, 0.2)), linear-gradient(to bottom right, #ff7300, #ffad7a);
+    color: #ffffff;
+    padding: 10px 0; /* Aumentando o padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px; /* Reduzindo a altura */
+}
+
+h1 {
+    font-size: 60px; /* Reduzindo o tamanho da fonte */
+}
+
+.perfil {
+    margin-left: 10px; /* Reduzindo a margem */
+    padding-left: 10px; /* Reduzindo o padding */
+}
+
+.perfil img {
+    width: 50px; /* Reduzindo o tamanho da imagem */
+    height: 50px; /* Reduzindo o tamanho da imagem */
+    border-radius: 50%;
+}
+
+.perfil img:hover {
+    width: 60px; /* Ajustando o tamanho da imagem */
+    height: 60px; /* Ajustando o tamanho da imagem */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0px 10px; /* Reduzindo o padding */
+    margin-right: 20px; /* Reduzindo a margem */
+    font-size: 20px; /* Reduzindo o tamanho da fonte */
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 15px; /* Reduzindo a margem */
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* -------------------MAIN DA PÁGINA---------------------------- */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Alterado para 90vh */
+    background-color: rgb(224, 224, 224);
+}
+
+.box-geral {
+    width: 80%;
+    max-width: 800px;
+    padding: 50px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    outline: none;
+    border-style: none;
+}
+
+.inputs div {
+    margin-bottom: 10px;
+}
+
+.cidade select {
+    width: calc(104%);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+form {
+    grid-column: 2 / 1;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: calc(100% - 10px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    width: 120px;
+    padding: 10px;
+    margin-left: 150px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+    transform: scale(1.2);
+}
+
+/* Estilos para o Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer span {
+    font-size: 14px;
+}
