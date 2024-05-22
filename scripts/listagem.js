@@ -1,48 +1,38 @@
 const LOCAL_API = "http://localhost:9900/list.php";
+
+// Função para criar um elemento de lista para um cliente
+function criarItemLista(cliente) {
+  const itemLista = document.createElement("li");
+  itemLista.textContent = `Nome: ${cliente.nome}, CPF: ${cliente.cpf}, Celular: ${cliente.celular}, Município: ${cliente.municipio}, Email: ${cliente.email}`;
+  return itemLista;
+}
+
+// Função para limpar e exibir os clientes na página
+function mostrarClientes(clientes) {
+  const listaClientes = document.getElementById("list");
+  listaClientes.innerHTML = ""; // Limpa o conteúdo atual da lista
+  clientes.forEach((cliente) => {
+    const itemLista = criarItemLista(cliente);
+    listaClientes.appendChild(itemLista); // Adiciona o elemento de lista à lista de clientes
+  });
+}
+
+// Função para carregar os clientes da API
 function carregarClientes() {
-  // Faz uma requisição GET para a API PHP
   fetch(LOCAL_API)
     .then((response) => {
-      // Verifica se a resposta da requisição foi bem-sucedida
       if (!response.ok) {
         throw new Error("Erro ao carregar os clientes");
       }
-      // Retorna a resposta como JSON
-      return console.log(response);
+      return response.json(); // Retorna a resposta como JSON
     })
     .then((data) => {
-      // Processa os dados recebidos
-      mostrarClientes(data);
-      console.log(data.json(), "<<<<<");
+      mostrarClientes(data); // Exibe os clientes na página
     })
     .catch((error) => {
-      // Manipula erros
-      console.error("Erro:", error);
+      console.error("Erro:", error); // Manipula erros
     });
 }
 
-// Função para exibir os clientes na página
-function mostrarClientes(clientes) {
-  // Seleciona o elemento HTML onde os clientes serão exibidos
-  const listaClientes = document.getElementById("list");
-
-  // Limpa o conteúdo atual da lista
-  listaClientes.innerHTML = "";
-
-  console.log(clientes.json(), "<<<<<");
-  // Itera sobre os clientes recebidos
-  // clientes.forEach((cliente) => {
-  //   // Cria um elemento de lista para cada cliente
-  //   const itemLista = document.createElement("li");
-  //   console.log(cliente);
-
-  //   // Adiciona os dados do cliente ao elemento de lista
-  //   itemLista.textContent = `Nome: ${cliente.nome}, CPF: ${cliente.cpf}, Celular: ${cliente.celular}, Município: ${cliente.municipio}, Email: ${cliente.email}`;
-
-  //   // Adiciona o elemento de lista à lista de clientes
-  //   listaClientes.appendChild(itemLista);
-  // });
-}
-
-// Chama a função para carregar os clientes quando a página carregar
+// Chama a função para carregar os clientes quando a página for carregada
 document.addEventListener("DOMContentLoaded", carregarClientes);
