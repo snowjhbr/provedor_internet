@@ -15,7 +15,7 @@ header {
 }
 
 #main-background {
-    background-image: url('imagens/slide05.jpg'); /* Substitua pelo caminho da sua imagem de fundo */
+    background-image: url('imagens/fundo\ main\ 2.jpg'); /* Substitua pelo caminho da sua imagem de fundo */
     background-size: cover; /* Ajusta a imagem para cobrir todo o conteúdo */
     background-repeat: no-repeat; /* Evita a repetição da imagem */
     background-attachment: fixed; /* Mantém a imagem fixa enquanto a página é rolada */
@@ -41,6 +41,11 @@ h1 {
     width: 80px; /* Reduzindo o tamanho da imagem */
     height: 80px; /* Reduzindo o tamanho da imagem */
     border-radius: 50%;
+}
+
+.perfil img:hover {
+    width: 100px; /* Reduzindo o tamanho da imagem */
+    height: 100px; /* Reduzindo o tamanho da imagem */
 }
 
 nav ul {
@@ -70,6 +75,8 @@ nav ul li a:hover {
     text-decoration: none;
     color: black;
 }
+
+/* -----------------MAIN DA PAGINA-------------*/
 
 main {
     padding: 20px; /* Reduzindo o padding */
@@ -138,6 +145,7 @@ h4{
 
 p{
     font-size: 15px; /* Reduzindo o tamanho da fonte */
+    font-weight: bold;
 }
 
 .globo-1 img{
@@ -167,6 +175,8 @@ p{
     background-color: #c45800;
     transform: scale(1.2);
 }
+
+/* -----------------FOOTER DA PÁGINA DA PAGINA-------------*/
 
 footer {
     background-color: #110800;
