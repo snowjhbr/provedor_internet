@@ -1,4 +1,4 @@
-const LOCAL_API = "http://localhost:9900/list.php";
+const LOCAL_LIST_API = "http://localhost:9900/list.php";
 
 // Função para criar um elemento de lista para um cliente
 function criarItemLista(cliente) {
@@ -9,14 +9,14 @@ function criarItemLista(cliente) {
   const botaoApagar = document.createElement("button");
   botaoApagar.textContent = "Apagar";
   botaoApagar.addEventListener("click", function () {
-    apagarCliente(cliente.id); // Chama a função para apagar o cliente quando o botão for clicado
+    apagarCliente(cliente.id);
   });
 
   // Cria um botão para editar dados do cliente
   const botaoEditar = document.createElement("button");
   botaoEditar.textContent = "Editar";
   botaoEditar.addEventListener("click", function () {
-    window.location.href = `cadastro.html`;
+    window.location.href = `cadastro.html?id=${cliente.id}`;
   });
 
   // Adiciona o botão à lista de clientes
@@ -38,7 +38,7 @@ function mostrarClientes(clientes) {
 
 // Função para carregar os clientes da API
 function carregarClientes() {
-  fetch(LOCAL_API)
+  fetch(LOCAL_LIST_API)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Erro ao carregar os clientes");
@@ -69,7 +69,7 @@ function apagarCliente(id) {
     })
     .then((data) => {
       console.log(data); // Exibe a resposta do servidor
-      carregarClientes(); // Recarrega a lista de clientes após apagar um cliente
+      mostrarClientes(data); // Recarrega a lista de clientes após apagar um cliente
     })
     .catch((error) => {
       console.error("Erro:", error); // Manipula erros

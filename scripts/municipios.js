@@ -8,7 +8,7 @@ fetch(
   .then((municipios) => {
     municipios.forEach((municipio) => {
       const option = document.createElement("option");
-      option.value = municipio.id;
+      option.value = municipio.nome;
       option.text = municipio.nome;
       municipioSelect.appendChild(option);
     });
