@@ -1,30 +1,9 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background: linear-gradient(
-      to bottom,
-      rgba(253, 37, 37, 0.863),
-      rgba(255, 72, 0, 0.2)
-    ),
-    linear-gradient(to bottom right, #ff7300, #ffad7a);
-  color: #ffffff;
-  padding: 5px 0; /* Reduzindo o padding */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px; /* Reduzindo a altura */
-}
-
 #main-background {
-  background-image: url("imagens/fundo\ main\ 2.jpg"); /* Substitua pelo caminho da sua imagem de fundo */
-  background-size: cover; /* Ajusta a imagem para cobrir todo o conteúdo */
-  background-repeat: no-repeat; /* Evita a repetição da imagem */
-  background-attachment: fixed; /* Mantém a imagem fixa enquanto a página é rolada */
-  padding: 20px; /* Adicione padding se necessário */
+  background-image: url("imagens/fundo\ main\ 2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 20px;
   opacity: 0.9;
 }
 
@@ -179,8 +158,6 @@ p {
   transform: scale(1.2);
 }
 
-/* -----------------FOOTER DA PÁGINA DA PAGINA-------------*/
-
 footer {
   background-color: #110800;
   color: #fff;
@@ -192,5 +169,5 @@ footer {
 }
 
 span {
-  font-size: 15px; /* Reduzindo o tamanho da fonte*/
+  font-size: 15px;
 }

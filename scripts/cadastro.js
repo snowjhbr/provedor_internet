@@ -10,18 +10,15 @@ document.getElementById("form").addEventListener("submit", function (event) {
     body: formData,
   })
     .then((response) => {
+      window.location.href = "listagem.html";
       if (!response.ok) {
-        throw new Error("Erro ao cadastrar o cliente");
+        throw new Error(
+          "Erro ao cadastrar o cliente, tente novamente mais tarde."
+        );
       }
       return response.text();
     })
-    .then((data) => {
-      console.log(data);
-      alert("Cliente cadastrado com sucesso!"); // Exibe mensagem de sucesso
-      window.location.href = "lista.html"; // Redireciona para a página de listagem
-    })
     .catch((error) => {
       console.error("Erro:", error);
-      // Não exibe a mensagem de erro aqui, pois estamos capturando apenas erros reais da requisição
     });
 });
